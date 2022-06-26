@@ -1,0 +1,24 @@
+<%- include("header") -%>
+<body>
+  <div class="box" id="heading">
+    <h1><%=typeofday%></h1>
+  </div>
+  <div class="box">
+    <%  for (var i=0;i<newItem.length;i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p> <%= newItem[i] %> </p>
+      </div>
+      <% } %>
+      <form class="item" action="/" method="post">
+        <input type="text"  name="usrinput" placeholder="Add a task" autocomplete="off">
+        <button type="submit" name="button" value=<%= typeofday %> >+</button>
+
+      </form>
+  </div>
+  <!-- <% if (typeofday==="Weekday"){ %>
+    <h1 style="color: blue"> <%=typeofday%></h1>
+  <% } else { %>
+    <h1 style="color: yellow"><%=typeofday%> </h1>
+  <% } %> -->
+<%- include("footer") -%>
